@@ -154,21 +154,6 @@
         a:hover {
             background: #031d1d;
         }
-
-        @keyframes hyperJump {
-            0% {
-                transform: scale(0);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 
@@ -181,23 +166,21 @@
         <div class="icons">
             <a href="https://github.com/MarkToldi/MySite" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/m%C3%A1rk-toldi-a20392322/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="Projects.html"><i class="fa fa-terminal"></i></a>
+            <a href="Main.html"><i class="fa fa-drivers-license"></i></a>
         </div>
         <div class="sidebar-tab">
             <i class="fas fa-arrow-right"></i>
         </div>
     </div>
     <div class="container">
-        <h1>Welcome to my website<span class="cursor"></span></h1>
-        <p>Please take a look around and get to know me!</p>
+        <h1>Welcome to my projects<span class="cursor"></span></h1>
+        
         
     </div>
 
     <script>
         const starContainer = document.querySelector('.background-stars');
         const starCount = 100;
-
-        
 
         for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
