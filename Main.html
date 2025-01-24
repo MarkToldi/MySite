@@ -34,9 +34,10 @@
         .star {
             position: absolute;
             background: #fff;
-            width: 5px;
-            height: 5px;
-            animation: fly 5s linear infinite;
+            width: 7px;
+            height: 3px;
+            animation: starFly 5s linear infinite;
+            border-radius: 50%;
         }
 
         @keyframes fly {
@@ -155,18 +156,28 @@
             background: #031d1d;
         }
 
-        @keyframes hyperJump {
+
+        @keyframes starFly {
             0% {
-                transform: scale(0);
+                transform: translateX(100vw) translateY(0) scale(0.5);
                 opacity: 1;
             }
             50% {
-                transform: scale(1);
+                transform: translateX(-50vw) translateY(10vh) scale(1);
                 opacity: 1;
             }
             100% {
-                transform: scale(1);
+                transform: translateX(-200vw) translateY(-50vh) scale(1.5);
                 opacity: 0;
+            }
+        }   
+
+        @keyframes starSpeedUp {
+            0% {
+                transform: translateX(100vw);
+            }
+            100% {
+                transform: translateX(-50vw);
             }
         }
     </style>
@@ -179,9 +190,9 @@
         <h2>Sidebar</h2>
         <p>Some content here</p>
         <div class="icons">
-            <a href="https://github.com/MarkToldi/MySite" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/MarkToldi" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/m%C3%A1rk-toldi-a20392322/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="Projects.html"><i class="fa fa-terminal"></i></a>
+            <a href="Projects.html" class="projects-link"><i class="fa fa-terminal"></i></a>
         </div>
         <div class="sidebar-tab">
             <i class="fas fa-arrow-right"></i>
@@ -193,19 +204,34 @@
         
     </div>
 
+    <div class="hyper-jump"></div>
+
     <script>
-        const starContainer = document.querySelector('.background-stars');
-        const starCount = 100;
+        window.addEventListener('load', () => {
+            const starContainer = document.querySelector('.background-stars');
+            const starCount = 100;
 
-        
+            
 
-        for (let i = 0; i < starCount; i++) {
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.animationDelay = Math.random() * 7 + 's';
+                starContainer.appendChild(star);
+            }
+        });
+
+
+        /*for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
-            star.classList.add('star');
+            star.classList.add('star'); 
             star.style.top = Math.random() * 100 + 'vh';
-            star.style.animationDelay = Math.random() * 5 + 's';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            star.style.animationDuration = Math.random() * 2 + 1 + 's';
             starContainer.appendChild(star);
-        }
+        }*/
     </script>
 </body>
 

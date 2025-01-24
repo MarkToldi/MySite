@@ -34,9 +34,10 @@
         .star {
             position: absolute;
             background: #fff;
-            width: 5px;
-            height: 5px;
-            animation: fly 5s linear infinite;
+            width: 7px;
+            height: 3px;
+            animation: starFly 5s linear infinite;
+            border-radius: 50%;
         }
 
         @keyframes fly {
@@ -154,6 +155,31 @@
         a:hover {
             background: #031d1d;
         }
+       
+
+        @keyframes starFly {
+            0% {
+                transform: translateX(100vw) translateY(0) scale(0.5);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-50vw) translateY(10vh) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-200vw) translateY(-50vh) scale(1.5);
+                opacity: 0;
+            }
+        }   
+
+        @keyframes starSpeedUp {
+            0% {
+                transform: translateX(100vw);
+            }
+            100% {
+                transform: translateX(-50vw);
+            }
+        }
     </style>
 </head>
 
@@ -164,7 +190,7 @@
         <h2>Sidebar</h2>
         <p>Some content here</p>
         <div class="icons">
-            <a href="https://github.com/MarkToldi/MySite" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/MarkToldi" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/m%C3%A1rk-toldi-a20392322/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="Main.html"><i class="fa fa-drivers-license"></i></a>
         </div>
@@ -178,6 +204,8 @@
         
     </div>
 
+    <div class="hyper-jump"></div>
+
     <script>
         const starContainer = document.querySelector('.background-stars');
         const starCount = 100;
@@ -186,9 +214,18 @@
             const star = document.createElement('div');
             star.classList.add('star');
             star.style.top = Math.random() * 100 + 'vh';
-            star.style.animationDelay = Math.random() * 5 + 's';
+            star.style.animationDelay = Math.random() * 7 + 's';
             starContainer.appendChild(star);
         }
+
+        document.querySelector('.projects-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            const hyperJump = document.querySelector('.hyper-jump');
+            hyperJump.style.display = 'block';
+            hyperJump.addEventListener('animationend', function() {
+                window.location.href = 'Projects.html';
+            });
+        });
     </script>
 </body>
 
