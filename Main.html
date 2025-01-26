@@ -11,14 +11,14 @@
             font-family: 'Consolas', sans-serif;
             line-height: 1.6;
             background: linear-gradient(to bottom, #031d1d, #000000);
+            background-attachment: fixed;
             color: #ffffff00;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column;
             min-height: 100vh;
-            padding-top: 2rem;
             margin: 0;
-            overflow: hidden;
+            padding: 2rem 0;
+            overflow-y: auto;
         }
 
         .background-stars {
@@ -111,6 +111,16 @@
             margin-left: 220px;
         }
 
+        .containerIntuduction {
+            text-align: center;
+            background: hsla(0, 0%, 100%, 0);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+            margin-left: 220px;
+        }
+
         .cursor {
             display: inline-block;
             background-color: #ffffff;
@@ -118,6 +128,52 @@
             height: 10px;
             margin-left: 5px;
             animation: blink 1s infinite;
+        }
+
+        .roadmap {
+            align-self: center;
+            margin: 2rem 220px;
+            padding: 1rem;
+            border-left: 3px solid #ffffff70;
+            position: relative;
+        }
+
+        .roadmap-item {
+            align-self: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .roadmap-item::before {
+            align-self: center;
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            background-color: #ffffff;
+            border-radius: 50%;
+            border: 2px solid #031d1d;
+        }
+
+        .roadmap h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .roadmap h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .roadmap p {
+            color: #ddd;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
         @keyframes blink {
@@ -187,7 +243,7 @@
     <div class="background-stars">
     </div>
     <div class="sidebar">
-        <h2>Sidebar</h2>
+        <h2>Shortcuts</h2>
         <p>Some content here</p>
         <div class="icons">
             <a href="https://github.com/MarkToldi" target="_blank"><i class="fab fa-github"></i></a>
@@ -204,6 +260,73 @@
         
     </div>
 
+    <div class="containerIntuduction">
+        <h1>Hi, my name is Mark Toldi.</h1>
+        <p>
+            My journey with coding began back in  Secondary School , where I was introduced to the fascinating world of computers and programming. At the time, I mostly explored basic programming concepts and dabbled in creating small scripts for fun. This early exposure sparked a curiosity that would soon evolve into a passion.
+        </p>
+        <p>
+            After finishing  Secondary School , I decided to pursue my interest in technology further by enrolling in the  University of Debrecen , where I studied  Computer Science . During my university years, I developed a solid foundation in programming, algorithms, and data structures. I also discovered a love for solving challenging problems, from building functional programs to optimizing code for better performance.
+        </p>
+        <p>
+            My learning path wasn’t just confined to the classroom. I spent countless nights working on personal projects, such as developing websites, creating Python-based automation scripts, and experimenting with various frameworks and tools. Coding became more than a skill—it became a way to express creativity and solve real-world problems.
+        </p>
+        <p>
+            During my time at university, I also ventured into  data science , which quickly became one of my favorite fields. The combination of coding, statistics, and visualization tools felt like a natural fit for my analytical mindset.
+        </p>
+        <p>
+            My professional journey began when I joined  E.ON  as a  Data Analyst . At E.ON, I had the opportunity to work with large datasets using tools like  Microsoft SQL Server  and  Python , primarily focusing on data cleaning and analysis using the  Pandas  library. I also gained hands-on experience with  Microsoft Power BI , where I created dashboards and reports that provided valuable insights to teams and management. Occasionally, I worked with  Microsoft Power Apps , which allowed me to contribute to internal workflow automation projects.
+        </p>
+        <p>
+            Looking back, every step of this journey has been an invaluable learning experience. Whether it was staying up late debugging code in university or collaborating on complex datasets at E.ON, each challenge has shaped me into a better developer and problem solver.
+        </p>
+        <p>
+            Today, I am always looking for new technologies to explore and new challenges to tackle. I enjoy staying up-to-date with trends in  web development ,  data science , and  software engineering , and I often spend my free time experimenting with new tools or building small projects to hone my skills.
+        </p>
+        <p>
+            When I’m not coding, I enjoy playing video games with friends, watching  Formula 1 , and reading books. Recently, I’ve been diving into books about personal growth and productivity to continuously improve both professionally and personally.
+        </p>
+    </div>
+
+    <div class="roadmap">
+        <h1>My Learning Journey</h1>
+        <div class="roadmap-item">
+            <h2>👨‍🎓 Várday Kata Reformed Primary And Secondary School (2017–2021)</h2>
+            <p>
+                - Got my first introduction to programming during high school.  
+                 Started experimenting with  HTML ,  CSS , and basic  JavaScript  and  C 
+                 Learned logical thinking and problem-solving through small coding projects.
+            </p>
+        </div>
+        <div class="roadmap-item">
+            <h2>🎓 University of Debrecen (2021–2025)</h2>
+            <p>
+                - Studied Computer Science Enginering Bsc, focusing on programming, data structures, and algorithms.  
+                 Gained experience in multiple programming languages, including  Python ,  C++ , and  Java .  
+                 Explored database management systems like  MySQL  and  PostgreSQL .  
+                 Worked on real-world projects, such as building web apps and analyzing datasets.  
+            </p>
+        </div>
+        <div class="roadmap-item">
+            <h2>💼 E.ON – Data Analyst (2022–2025)</h2>
+            <p>
+                - Worked with  large datasets  and optimized SQL queries to extract actionable insights.  
+                 Developed  Power BI dashboards  for visualizing key performance indicators.  
+                 Used  Python (Pandas)  for data preprocessing and analysis.  
+                 Contributed to automation using  Power Apps , improving efficiency for internal teams.  
+            </p>
+        </div>
+        <div class="roadmap-item">
+            <h2>🚀 Ongoing Learning</h2>
+            <p>
+                - Exploring advanced  web development  tools like  React  and  Next.js .  
+                 Building more projects involving  machine learning  and  AI .  
+                 Continuously improving my coding practices by contributing to open-source projects.  
+            </p>
+        </div>
+    </div>
+    
+
     <div class="hyper-jump"></div>
 
     <script>
@@ -213,7 +336,7 @@
 
             
 
-            for (let i = 0; i < starCount; i++) {
+            for (let i = 1; i < starCount; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star');
                 star.style.top = Math.random() * 100 + 'vh';
@@ -223,15 +346,6 @@
         });
 
 
-        /*for (let i = 0; i < starCount; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star'); 
-            star.style.top = Math.random() * 100 + 'vh';
-            star.style.left = Math.random() * 100 + 'vw';
-            star.style.animationDelay = Math.random() * 2 + 's';
-            star.style.animationDuration = Math.random() * 2 + 1 + 's';
-            starContainer.appendChild(star);
-        }*/
     </script>
 </body>
 
