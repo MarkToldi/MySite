@@ -52,6 +52,7 @@
         }
 
         .sidebar {
+            text-align: center;
             position: fixed;
             left: -200px;
             top: 0;
@@ -176,6 +177,22 @@
             line-height: 1.5;
         }
 
+        .intro-image {
+            margin: 0 auto;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #ffffff36;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         @keyframes blink {
             0%, 50% {
                 opacity: 1;
@@ -244,7 +261,6 @@
     </div>
     <div class="sidebar">
         <h2>Shortcuts</h2>
-        <p>Some content here</p>
         <div class="icons">
             <a href="https://github.com/MarkToldi" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/m%C3%A1rk-toldi-a20392322/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -261,6 +277,9 @@
     </div>
 
     <div class="containerIntuduction">
+        <div class="intro-image">
+            <img src="myphoto.jpg" alt="Mark Toldi Graduation Photo" />
+        </div>
         <h1>Hi, my name is Mark Toldi.</h1>
         <p>
             My journey with coding began back in  Secondary School , where I was introduced to the fascinating world of computers and programming. At the time, I mostly explored basic programming concepts and dabbled in creating small scripts for fun. This early exposure sparked a curiosity that would soon evolve into a passion.
