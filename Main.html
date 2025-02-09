@@ -103,12 +103,12 @@
 
         .container {
             align-self: center;
-            text-align: left;
+            text-align: center;
             background: hsla(0, 0%, 100%, 0);
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-left: 220px;
+            margin-left: 0px;
         }
 
         .containerIntuduction {
@@ -177,6 +177,9 @@
         }
 
         .intro-image {
+            align-self: center;
+            display: flex;
+            justify-content: center;
             margin: 0 auto;
             width: 255px;
             height: 255px;
@@ -187,6 +190,9 @@
         }
 
         .intro-image img {
+            align-self: center;
+            display: flex;
+            justify-content: center;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -194,7 +200,8 @@
 
                 /* Container for image and sidebar */
         .image-container {
-            position: relative;
+
+            position: center;
             display: inline-block;
         }
 
@@ -202,13 +209,13 @@
         .image-container img {
             width: 300px; /* Adjust size as needed */
             display: block;
-            position: relative;
+            position: center;
             z-index: 2; /* Ensures image is above the sidebar */
         }
 
         /* The sliding sidebar */
         .hover-bar {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             width: 400px; /* Sidebar width */
@@ -305,45 +312,24 @@
             <i class="fas fa-arrow-right"></i>
         </div>
     </div>
+
     <div class="container">
+        <h1>Hi, my name is Mark,</h1>
         <h1>Welcome to my website<span class="cursor"></span></h1>
         <p>Please take a look around and get to know me!</p>
-        
+        <p>Tipp: Hoover on my picture to check my skills.</p>   
     </div>
 
-    <div class="containerIntuduction">
-        <div class="intro-image">
-            <img src="myphoto.jpg" alt="Mark Toldi Graduation Photo" />
-            <div class="hover-bar">
-                <h2>Skills<span class="cursor"></span></h2>
-            </div>
+    <div class="intro-image">
+        <img src="myphoto.jpg" alt="Mark Toldi Graduation Photo" />
+        <div class="hover-bar">
+            <h2>Skills<span class="cursor"></span></h2>
         </div>
-        <h1>Hi, my name is Mark Toldi.</h1>
-        <p>
-            My journey with coding began back in  Secondary School , where I was introduced to the fascinating world of computers and programming. At the time, I mostly explored basic programming concepts and dabbled in creating small scripts for fun. This early exposure sparked a curiosity that would soon evolve into a passion.
-        </p>
-        <p>
-            After finishing  Secondary School , I decided to pursue my interest in technology further by enrolling in the  University of Debrecen , where I studied  Computer Science . During my university years, I developed a solid foundation in programming, algorithms, and data structures. I also discovered a love for solving challenging problems, from building functional programs to optimizing code for better performance.
-        </p>
-        <p>
-            My learning path wasn’t just confined to the classroom. I spent countless nights working on personal projects, such as developing websites, creating Python-based automation scripts, and experimenting with various frameworks and tools. Coding became more than a skill—it became a way to express creativity and solve real-world problems.
-        </p>
-        <p>
-            During my time at university, I also ventured into  data science , which quickly became one of my favorite fields. The combination of coding, statistics, and visualization tools felt like a natural fit for my analytical mindset.
-        </p>
-        <p>
-            My professional journey began when I joined  E.ON  as a  Data Analyst . At E.ON, I had the opportunity to work with large datasets using tools like  Microsoft SQL Server  and  Python , primarily focusing on data cleaning and analysis using the  Pandas  library. I also gained hands-on experience with  Microsoft Power BI , where I created dashboards and reports that provided valuable insights to teams and management. Occasionally, I worked with  Microsoft Power Apps , which allowed me to contribute to internal workflow automation projects.
-        </p>
-        <p>
-            Looking back, every step of this journey has been an invaluable learning experience. Whether it was staying up late debugging code in university or collaborating on complex datasets at E.ON, each challenge has shaped me into a better developer and problem solver.
-        </p>
-        <p>
-            Today, I am always looking for new technologies to explore and new challenges to tackle. I enjoy staying up-to-date with trends in  web development ,  data science , and  software engineering , and I often spend my free time experimenting with new tools or building small projects to hone my skills.
-        </p>
-        <p>
-            When I’m not coding, I enjoy playing video games with friends, watching  Formula 1 , and reading books. Recently, I’ve been diving into books about personal growth and productivity to continuously improve both professionally and personally.
-        </p>
     </div>
+    
+
+
+
 
     <div class="roadmap">
         <h1>My Learning Journey</h1>
@@ -382,6 +368,35 @@
             </p>
         </div>
     </div>
+
+    <div class="containerIntuduction">
+        <p>
+            My journey with coding began back in  Secondary School , where I was introduced to the fascinating world of computers and programming. At the time, I mostly explored basic programming concepts and dabbled in creating small scripts for fun. This early exposure sparked a curiosity that would soon evolve into a passion.
+        </p>
+        <p>
+            After finishing  Secondary School , I decided to pursue my interest in technology further by enrolling in the  University of Debrecen , where I studied  Computer Science . During my university years, I developed a solid foundation in programming, algorithms, and data structures. I also discovered a love for solving challenging problems, from building functional programs to optimizing code for better performance.
+        </p>
+        <p>
+            My learning path wasn’t just confined to the classroom. I spent countless nights working on personal projects, such as developing websites, creating Python-based automation scripts, and experimenting with various frameworks and tools. Coding became more than a skill—it became a way to express creativity and solve real-world problems.
+        </p>
+        <p>
+            During my time at university, I also ventured into  data science , which quickly became one of my favorite fields. The combination of coding, statistics, and visualization tools felt like a natural fit for my analytical mindset.
+        </p>
+        <p>
+            My professional journey began when I joined  E.ON  as a  Data Analyst . At E.ON, I had the opportunity to work with large datasets using tools like  Microsoft SQL Server  and  Python , primarily focusing on data cleaning and analysis using the  Pandas  library. I also gained hands-on experience with  Microsoft Power BI , where I created dashboards and reports that provided valuable insights to teams and management. Occasionally, I worked with  Microsoft Power Apps , which allowed me to contribute to internal workflow automation projects.
+        </p>
+        <p>
+            Looking back, every step of this journey has been an invaluable learning experience. Whether it was staying up late debugging code in university or collaborating on complex datasets at E.ON, each challenge has shaped me into a better developer and problem solver.
+        </p>
+        <p>
+            Today, I am always looking for new technologies to explore and new challenges to tackle. I enjoy staying up-to-date with trends in  web development ,  data science , and  software engineering , and I often spend my free time experimenting with new tools or building small projects to hone my skills.
+        </p>
+        <p>
+            When I’m not coding, I enjoy playing video games with friends, watching  Formula 1 , and reading books. Recently, I’ve been diving into books about personal growth and productivity to continuously improve both professionally and personally.
+        </p>
+    </div>
+
+    
     
     <script>
         window.addEventListener('load', () => {
