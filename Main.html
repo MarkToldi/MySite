@@ -192,6 +192,42 @@
             object-fit: cover;
         }
 
+                /* Container for image and sidebar */
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* The image */
+        .image-container img {
+            width: 300px; /* Adjust size as needed */
+            display: block;
+            position: relative;
+            z-index: 2; /* Ensures image is above the sidebar */
+        }
+
+        /* The sliding sidebar */
+        .hover-bar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px; /* Sidebar width */
+            height: 100%;
+            background: #56516d70;
+            color: white;
+            display: flex;
+            align-items: top;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%); /* Start completely hidden behind the image */
+            z-index: 1; /* Keeps sidebar behind the image */
+        }
+
+        /* Reveal sidebar when hovering over the image */
+        .intro-image:hover .hover-bar {
+            transform: translateX(0); /* Slide out smoothly */
+        }
+
         @keyframes blink {
             0%, 50% {
                 opacity: 1;
@@ -278,7 +314,9 @@
     <div class="containerIntuduction">
         <div class="intro-image">
             <img src="myphoto.jpg" alt="Mark Toldi Graduation Photo" />
-
+            <div class="hover-bar">
+                <h2>Skills<span class="cursor"></span></h2>
+            </div>
         </div>
         <h1>Hi, my name is Mark Toldi.</h1>
         <p>

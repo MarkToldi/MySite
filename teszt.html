@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Sidebar Behind Image</title>
+    <style>
+        /* Container for image and sidebar */
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* The image */
+        .image-container img {
+            width: 300px; /* Adjust size as needed */
+            display: block;
+            position: relative;
+            z-index: 2; /* Ensures image is above the sidebar */
+        }
+
+        /* The sliding sidebar */
+        .hover-bar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px; /* Sidebar width */
+            height: 100%;
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%); /* Start completely hidden behind the image */
+            z-index: 1; /* Keeps sidebar behind the image */
+        }
+
+        /* Reveal sidebar when hovering over the image */
+        .image-container:hover .hover-bar {
+            transform: translateX(0); /* Slide out smoothly */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="myphoto.jpg" alt="Hover Image">
+        <div class="hover-bar">
+            <p>Menu</p>
+        </div>
+    </div>
+
+</body>
+</html>
